@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Restaurants</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"
+    />
+  </head>
+
+  <body>
+    <h1>List of Restaurants</h1>
+
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Restaurant Name</th>
+          <th>Menu</th>
+          <th>Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td>{{ row['name'] }}</td>
+          <td>
+            <form method="post" action="/restaurant">
+              <input
+                type="hidden"
+                name="restaurant_id"
+                value="{{ row['resId'] }}"
+              />
+              <button type="submit" class="ui button">See Menu</button>
+            </form>
+          </td>
+          <td>
+            <form method="post" action="/evaluate">
+              <input
+                type="hidden"
+                name="restaurant_id"
+                value="{{ row['resId'] }}"
+              />
+              <button type="submit" class="ui button">Evaluate</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  </body>
+</html>

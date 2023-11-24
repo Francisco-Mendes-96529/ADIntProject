@@ -1,0 +1,26 @@
+{
+    "type": "ROOM",
+    "id": "1",
+    "name": "TestRoom 1",
+    "events": [
+        {
+            "type": "LESSON",
+            "start": "10:00",
+            "end": "12:00",
+            "weekday": "sexta",
+            "day": "11/10/2023",
+            "period": {
+                "start": "11/10/2023 10:00",
+                "end": "11/10/2023 12:00"
+            },
+            "info": "T",
+            "course": {
+                "id": "283085589466130",
+                "acronym": "ADInt",
+                "name": "Aplicações Distribuídas sobre a Internet",
+                "academicTerm": "1º semestre 2023/2024",
+                "url": "https://fenix.tecnico.ulisboa.pt/disciplinas/ADInt/2023-2024/1-semestre"
+            }
+        }
+    ]
+}

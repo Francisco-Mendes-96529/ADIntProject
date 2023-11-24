@@ -1,0 +1,19 @@
+{% extends 'layout_submit.html' %}
+
+{% block title %}Send message{% endblock %}
+
+{% block content %}
+
+<h1>Send a message</h1>
+<form method="post" action="/post_message">
+  <label for="from-user-id">From:</label>
+  <input type="text" id="from-user-id" name="from-user-id" required>
+  <label for="to-user-id">To:</label>
+  <input type="text" id="to-user-id" name="to-user-id" required>
+  <label for="message-text">Message:</label>
+  <textarea id="message-text" name="message-text" rows="12" cols="50" required></textarea>
+  <button type="submit" class="submit-button">Send</button>
+</form>
+
+
+{% endblock %}

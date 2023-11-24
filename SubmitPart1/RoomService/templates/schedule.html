@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}Schedule{% endblock %}
+
+{% block content %}
+<h1>Schedule for Space {{space_dict['name']}}</h1>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Weekday</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Info</th>
+      <th>Course</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if space_dict['events'] %}
+    {% for event_dict in space_dict['events'] %}
+    <tr>
+      <td>{{ event_dict['day'] }}</td>
+      <td>{{ event_dict['weekday'] }}</td>
+      <td>{{ event_dict['start'] }}</td>
+      <td>{{ event_dict['end'] }}</td>
+      <td>{{ event_dict['info'] }}</td>
+      <td>{{ event_dict['course']['acronym'] }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
+
+{% endblock %}

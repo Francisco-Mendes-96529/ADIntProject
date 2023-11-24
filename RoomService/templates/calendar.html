@@ -1,0 +1,70 @@
+{% extends 'layout_calendar.html' %}
+
+{% block content %}
+<h1>Space {{space_dict['name']}}</h1>
+<div class="calendar">
+
+  <div class="outer">
+    <table>
+      <thead>
+        <tr>
+          <th class="headcol th"></th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th class="endcol"></th>
+        </tr>
+      </thead>
+    </table>
+
+    <div class="wrap">
+      <table>
+
+        <tbody>
+          {% for hour in range(8,20) %}
+          {% set min = ['00', '30', '00'] %}
+            {% for m in range(0,2) %}
+            <tr>
+              {% if m == 0 %}
+              <td class="headcol">{{hour}}:{{min[m]}}</td>
+              {% else %}
+              <td class="headcol"></td>
+              {% endif %}
+
+              {% set final = "final" if hour == 19 and m == 1 %}
+
+              {% for day in ['segunda','terça','quarta','quinta','sexta'] %}
+                {% if space_dict['events'] %}
+                  {% for event_dict in space_dict['events'] if event_dict['weekday'] == day and event_dict['start'] == "%02d:%s"%(hour,min[m]) and event_dict['end'] == "%02d:%s"%(hour+m,min[m+1]) %}
+                    <td class={{  final  }}><div class="event"><p>{{ event_dict['course']['acronym'] ~ ' : ' ~ event_dict['info'] if event_dict['course'] else event_dict['info'] }}</p></div></td>
+                  {% else %}
+                    {% for event_dict in space_dict['events'] if event_dict['weekday'] == day and event_dict['start'] == "%02d:%s"%(hour,min[m]) %}
+                    <td class={{  final  }}><div class="event init"><p>{{ event_dict['course']['acronym'] ~ ' : ' ~ event_dict['info'] if event_dict['course'] else event_dict['info'] }}</p></div></td>
+                    {% else %}
+                      {% for event_dict in space_dict['events'] if event_dict['weekday'] == day and event_dict['start'] < "%02d:%s"%(hour,min[m]) and event_dict['end'] > "%02d:%s"%(hour+m,min[m+1]) %}
+                      <td class={{  final  }}><div class="event cont"></div></td>
+                      {% else %}
+                        {% for event_dict in space_dict['events'] if event_dict['weekday'] == day and event_dict['start'] < "%02d:%s"%(hour,min[m]) and event_dict['end'] == "%02d:%s"%(hour+m,min[m+1]) %}
+                        <td class={{  final  }}><div class="event end"></div></td>
+                        {% else %}
+                        <td class={{  final  }}></td>
+                        {% endfor %}
+                      {% endfor %}
+                    {% endfor %}
+                  {% endfor %}
+                {% else %}
+                <td class={{final}}></td>
+                {% endif %}
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

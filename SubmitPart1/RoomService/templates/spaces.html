@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}Spaces{% endblock %}
+
+{% block content %}
+
+<h1>List of spaces</h1>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Space Name</th>
+      <th>Schedule</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for space in spaces %}
+    <tr>
+      <td>{{ space.name }}</td>
+      <td>
+        <a class="ui button" href="/schedule/{{space.id}}">See</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

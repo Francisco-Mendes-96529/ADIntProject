@@ -1,0 +1,465 @@
+{
+  "type" : "ROOM",
+  "id" : "2448131361734",
+  "name" : "V1.08",
+  "topLevelSpace" : {
+    "type" : "CAMPUS",
+    "id" : "2448131360897",
+    "name" : "Alameda"
+  },
+  "containedSpaces" : [ ],
+  "parentSpace" : {
+    "type" : "FLOOR",
+    "id" : "2448131361047",
+    "name" : "1",
+    "topLevelSpace" : {
+      "type" : "CAMPUS",
+      "id" : "2448131360897",
+      "name" : "Alameda"
+    }
+  },
+  "description" : "V1.08",
+  "capacity" : {
+    "normal" : 60,
+    "exam" : 30
+  },
+  "events" : [ {
+    "type" : "LESSON",
+    "start" : "11:00",
+    "end" : "12:30",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 11:00",
+      "end" : "12/10/2023 12:30"
+    },
+    "info" : "L",
+    "course" : {
+      "id" : "283085589465632",
+      "acronym" : "FProg-2",
+      "name" : "Fundamentos da Programação",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/FProg-2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "TEST",
+    "start" : "18:00",
+    "end" : "19:00",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 18:00",
+      "end" : "10/10/2023 19:00"
+    },
+    "courses" : [ {
+      "id" : "283085589465797",
+      "acronym" : "AL10",
+      "name" : "Álgebra Linear",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AL10/2023-2024/1-semestre"
+    }, {
+      "id" : "283085589465646",
+      "acronym" : "AL6",
+      "name" : "Álgebra Linear",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AL6/2023-2024/1-semestre"
+    } ],
+    "description" : "1º  MAP 45"
+  }, {
+    "type" : "LESSON",
+    "start" : "13:00",
+    "end" : "14:30",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 13:00",
+      "end" : "12/10/2023 14:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465930",
+      "acronym" : "VC",
+      "name" : "Vias de Comunicação",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/VC/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "12:30",
+    "end" : "14:00",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 12:30",
+      "end" : "11/10/2023 14:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465741",
+      "acronym" : "H-II",
+      "name" : "Hidráulica II",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/H-II/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "14:00",
+    "end" : "16:00",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 14:00",
+      "end" : "11/10/2023 16:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465959",
+      "acronym" : "HOM",
+      "name" : "Hidráulica e Obras Marítimas",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/HOM/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "13:00",
+    "end" : "15:00",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 13:00",
+      "end" : "09/10/2023 15:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465951",
+      "acronym" : "ADAS",
+      "name" : "Análise de Dados e Avaliação de Sistemas",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/ADAS/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "14:00",
+    "end" : "16:00",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 14:00",
+      "end" : "13/10/2023 16:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465943",
+      "acronym" : "EM-I",
+      "name" : "Estruturas Metálicas I",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/EM-I/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "14:00",
+    "end" : "15:30",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 14:00",
+      "end" : "10/10/2023 15:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465943",
+      "acronym" : "EM-I",
+      "name" : "Estruturas Metálicas I",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/EM-I/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "15:30",
+    "end" : "17:00",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 15:30",
+      "end" : "09/10/2023 17:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465942",
+      "acronym" : "EG-II",
+      "name" : "Estruturas Geotécnicas II",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/EG-II/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "11:30",
+    "end" : "13:00",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 11:30",
+      "end" : "13/10/2023 13:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465935",
+      "acronym" : "Pon",
+      "name" : "Pontes",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Pon/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "15:30",
+    "end" : "17:00",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 15:30",
+      "end" : "10/10/2023 17:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465931",
+      "acronym" : "EB2",
+      "name" : "Estruturas de Betão I",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/EB2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "16:00",
+    "end" : "17:30",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 16:00",
+      "end" : "13/10/2023 17:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465930",
+      "acronym" : "VC",
+      "name" : "Vias de Comunicação",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/VC/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "10:30",
+    "end" : "12:30",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 10:30",
+      "end" : "09/10/2023 12:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465929",
+      "acronym" : "DEES",
+      "name" : "Dinâmica Estrutural e Engenharia Sísmica",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/DEES/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "17:30",
+    "end" : "18:30",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 17:30",
+      "end" : "09/10/2023 18:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465812",
+      "acronym" : "CDI18",
+      "name" : "Cálculo Diferencial e Integral I",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/CDI18/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "11:30",
+    "end" : "13:00",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 11:30",
+      "end" : "10/10/2023 13:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465742",
+      "acronym" : "FCon",
+      "name" : "Física das Construções",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/FCon/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "09:30",
+    "end" : "11:00",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 09:30",
+      "end" : "12/10/2023 11:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465742",
+      "acronym" : "FCon",
+      "name" : "Física das Construções",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/FCon/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "10:00",
+    "end" : "11:30",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 10:00",
+      "end" : "10/10/2023 11:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465739",
+      "acronym" : "RM-II",
+      "name" : "Resistência de Materiais II",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/RM-II/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "14:30",
+    "end" : "16:30",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 14:30",
+      "end" : "12/10/2023 16:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465717",
+      "acronym" : "MMCom",
+      "name" : "Mecânica e Modelação Computacional",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/MMCom/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "16:30",
+    "end" : "18:30",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 16:30",
+      "end" : "12/10/2023 18:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465717",
+      "acronym" : "MMCom",
+      "name" : "Mecânica e Modelação Computacional",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/MMCom/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "08:00",
+    "end" : "10:00",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 08:00",
+      "end" : "13/10/2023 10:00"
+    },
+    "info" : "T",
+    "course" : {
+      "id" : "564560566184108",
+      "acronym" : "DBR",
+      "name" : "Dosimetria e Blindagem das Radiações",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/DBR/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "10:00",
+    "end" : "11:30",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 10:00",
+      "end" : "13/10/2023 11:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465658",
+      "acronym" : "Meca",
+      "name" : "Mecanobiologia",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Meca/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "17:00",
+    "end" : "19:00",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 17:00",
+      "end" : "11/10/2023 19:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465573",
+      "acronym" : "T2",
+      "name" : "Termodinâmica II",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/T2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "10:00",
+    "end" : "12:00",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 10:00",
+      "end" : "11/10/2023 12:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465383",
+      "acronym" : "CITra-2",
+      "name" : "Conservação de Infraestruturas de Transporte",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/CITra-2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "17:00",
+    "end" : "18:00",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 17:00",
+      "end" : "10/10/2023 18:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465591",
+      "acronym" : "AL3",
+      "name" : "Álgebra Linear",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AL3/2023-2024/1-semestre"
+    }
+  } ]
+}

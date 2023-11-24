@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Check In/Out List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"
+    />
+  </head>
+
+  <body>
+    <h1>Check In/Out List</h1>
+
+    <div class="container">
+      <form action="/listcheckinout" method="post">
+        <label for="userId">User ID:</label>
+        <textarea id="userId" name="userId" rows="1" cols="15"></textarea>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Entry Id</th>
+          <th>User Id</th>
+          <th>roomId</th>
+          <th>Checkin Time</th>
+          <th>Checkout Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td>{{ row['id'] }}</td>
+          <td>{{ row['userId'] }}</td>
+          <td>{{ row['roomId'] }}</td>
+          <td>{{ row['checkin'] }}</td>
+          <td>{{ row['checkout'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  </body>
+</html>

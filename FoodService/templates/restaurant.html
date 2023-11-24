@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Restaurant Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"
+    />
+  </head>
+
+  <body>
+    <h1>Restaurant Menu</h1>
+
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Restaurant Menu</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td>{{ row['food'] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  </body>
+</html>

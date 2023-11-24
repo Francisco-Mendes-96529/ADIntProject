@@ -1,0 +1,471 @@
+{
+  "type" : "ROOM",
+  "id" : "2448131361716",
+  "name" : "V1.11",
+  "topLevelSpace" : {
+    "type" : "CAMPUS",
+    "id" : "2448131360897",
+    "name" : "Alameda"
+  },
+  "containedSpaces" : [ ],
+  "parentSpace" : {
+    "type" : "FLOOR",
+    "id" : "2448131361047",
+    "name" : "1",
+    "topLevelSpace" : {
+      "type" : "CAMPUS",
+      "id" : "2448131360897",
+      "name" : "Alameda"
+    }
+  },
+  "description" : "V1.11",
+  "capacity" : {
+    "normal" : 50,
+    "exam" : 25
+  },
+  "events" : [ {
+    "type" : "GENERIC",
+    "start" : "10:00",
+    "end" : "11:30",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 10:00",
+      "end" : "12/10/2023 11:30"
+    },
+    "description" : "Rui",
+    "title" : "aula extra- Inês Magessi"
+  }, {
+    "type" : "GENERIC",
+    "start" : "09:30",
+    "end" : "11:00",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 09:30",
+      "end" : "09/10/2023 11:00"
+    },
+    "description" : "..",
+    "title" : "Entrevista em ocasião da cadeira DFM"
+  }, {
+    "type" : "GENERIC",
+    "start" : "15:00",
+    "end" : "17:00",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 15:00",
+      "end" : "09/10/2023 17:00"
+    },
+    "description" : "Joao Pedro Conde\r\n1601882",
+    "title" : "aula extra-Apresentação"
+  }, {
+    "type" : "LESSON",
+    "start" : "12:00",
+    "end" : "13:30",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 12:00",
+      "end" : "13/10/2023 13:30"
+    },
+    "info" : "L",
+    "course" : {
+      "id" : "283085589465633",
+      "acronym" : "OC-2",
+      "name" : "Organização de Computadores",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/OC-2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "TEST",
+    "start" : "18:00",
+    "end" : "19:00",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 18:00",
+      "end" : "13/10/2023 19:00"
+    },
+    "courses" : [ {
+      "id" : "283085589465926",
+      "acronym" : "EFinitos",
+      "name" : "Elementos Finitos",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/EFinitos/2023-2024/1-semestre"
+    } ],
+    "description" : "1º  MAP 45"
+  }, {
+    "type" : "LESSON",
+    "start" : "17:30",
+    "end" : "19:30",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 17:30",
+      "end" : "10/10/2023 19:30"
+    },
+    "info" : "T",
+    "course" : {
+      "id" : "564560566184111",
+      "acronym" : "RRad",
+      "name" : "Resíduos Radioactivos",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/RRad/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "08:30",
+    "end" : "10:00",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 08:30",
+      "end" : "12/10/2023 10:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "564560566184108",
+      "acronym" : "DBR",
+      "name" : "Dosimetria e Blindagem das Radiações",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/DBR/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "GENERIC",
+    "start" : "12:00",
+    "end" : "13:30",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 12:00",
+      "end" : "11/10/2023 13:30"
+    },
+    "description" : "..",
+    "title" : "Aula Extra - Vias de Comunicação do MEC"
+  }, {
+    "type" : "LESSON",
+    "start" : "12:00",
+    "end" : "13:30",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 12:00",
+      "end" : "09/10/2023 13:30"
+    },
+    "info" : "L",
+    "course" : {
+      "id" : "283085589465633",
+      "acronym" : "OC-2",
+      "name" : "Organização de Computadores",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/OC-2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "09:00",
+    "end" : "11:00",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 09:00",
+      "end" : "10/10/2023 11:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465887",
+      "acronym" : "PTEfl",
+      "name" : "Prevenção e Tratamento de Efluentes",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/PTEfl/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "16:30",
+    "end" : "18:30",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 16:30",
+      "end" : "11/10/2023 18:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465561",
+      "acronym" : "Qui-6",
+      "name" : "Química",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Qui-6/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "13:30",
+    "end" : "15:00",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 13:30",
+      "end" : "12/10/2023 15:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465951",
+      "acronym" : "ADAS",
+      "name" : "Análise de Dados e Avaliação de Sistemas",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/ADAS/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "10:30",
+    "end" : "12:00",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 10:30",
+      "end" : "11/10/2023 12:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465935",
+      "acronym" : "Pon",
+      "name" : "Pontes",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Pon/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "13:30",
+    "end" : "15:00",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 13:30",
+      "end" : "09/10/2023 15:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465922",
+      "acronym" : "Aerod-II",
+      "name" : "Aerodinâmica II",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Aerod-II/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "13:30",
+    "end" : "14:30",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 13:30",
+      "end" : "10/10/2023 14:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465787",
+      "acronym" : "AL9",
+      "name" : "Álgebra Linear",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AL9/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "15:00",
+    "end" : "16:00",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 15:00",
+      "end" : "13/10/2023 16:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "1971935449712204",
+      "acronym" : "CDI14-2",
+      "name" : "Cálculo Diferencial e Integral I",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/CDI14-2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "17:00",
+    "end" : "18:00",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 17:00",
+      "end" : "13/10/2023 18:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465783",
+      "acronym" : "CDI14",
+      "name" : "Cálculo Diferencial e Integral I",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/CDI14/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "13:30",
+    "end" : "15:00",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 13:30",
+      "end" : "11/10/2023 15:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465774",
+      "acronym" : "Ges2",
+      "name" : "Gestão",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Ges2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "15:00",
+    "end" : "16:30",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 15:00",
+      "end" : "12/10/2023 16:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465774",
+      "acronym" : "Ges2",
+      "name" : "Gestão",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Ges2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "15:00",
+    "end" : "16:30",
+    "weekday" : "quarta",
+    "day" : "11/10/2023",
+    "period" : {
+      "start" : "11/10/2023 15:00",
+      "end" : "11/10/2023 16:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465774",
+      "acronym" : "Ges2",
+      "name" : "Gestão",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Ges2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "14:30",
+    "end" : "16:00",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 14:30",
+      "end" : "10/10/2023 16:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465774",
+      "acronym" : "Ges2",
+      "name" : "Gestão",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/Ges2/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "13:30",
+    "end" : "14:30",
+    "weekday" : "sexta",
+    "day" : "13/10/2023",
+    "period" : {
+      "start" : "13/10/2023 13:30",
+      "end" : "13/10/2023 14:30"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465743",
+      "acronym" : "CDI9",
+      "name" : "Cálculo Diferencial e Integral III",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://www.math.tecnico.ulisboa.pt/~pgirao/cdi3/cdi3_index.php"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "11:00",
+    "end" : "12:00",
+    "weekday" : "segunda",
+    "day" : "09/10/2023",
+    "period" : {
+      "start" : "09/10/2023 11:00",
+      "end" : "09/10/2023 12:00"
+    },
+    "info" : "PB",
+    "course" : {
+      "id" : "283085589465743",
+      "acronym" : "CDI9",
+      "name" : "Cálculo Diferencial e Integral III",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://www.math.tecnico.ulisboa.pt/~pgirao/cdi3/cdi3_index.php"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "16:30",
+    "end" : "18:30",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 16:30",
+      "end" : "12/10/2023 18:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465605",
+      "acronym" : "GAMod",
+      "name" : "Grupos, Anéis e Módulos",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/GAMod/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "11:30",
+    "end" : "13:00",
+    "weekday" : "quinta",
+    "day" : "12/10/2023",
+    "period" : {
+      "start" : "12/10/2023 11:30",
+      "end" : "12/10/2023 13:00"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465556",
+      "acronym" : "MC-5",
+      "name" : "Matemática Computacional",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/MC-5/2023-2024/1-semestre"
+    }
+  }, {
+    "type" : "LESSON",
+    "start" : "11:30",
+    "end" : "13:30",
+    "weekday" : "terça",
+    "day" : "10/10/2023",
+    "period" : {
+      "start" : "10/10/2023 11:30",
+      "end" : "10/10/2023 13:30"
+    },
+    "info" : "TP",
+    "course" : {
+      "id" : "283085589465379",
+      "acronym" : "DMol",
+      "name" : "Design Molecular",
+      "academicTerm" : "1º semestre 2023/2024",
+      "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/DMol/2023-2024/1-semestre"
+    }
+  } ]
+}

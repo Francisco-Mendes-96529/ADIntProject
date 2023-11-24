@@ -1,0 +1,333 @@
+{
+    "type" : "ROOM",
+    "id" : "2448131361191",
+    "name" : "  SCDEEC 3",
+    "topLevelSpace" : {
+      "type" : "CAMPUS",
+      "id" : "2448131360897",
+      "name" : "Alameda"
+    },
+    "containedSpaces" : [ ],
+    "parentSpace" : {
+      "type" : "FLOOR",
+      "id" : "2448131361025",
+      "name" : "1",
+      "topLevelSpace" : {
+        "type" : "CAMPUS",
+        "id" : "2448131360897",
+        "name" : "Alameda"
+      }
+    },
+    "description" : "  SCDEEC 3",
+    "capacity" : {
+      "normal" : 0,
+      "exam" : 0
+    },
+    "events" : [ {
+      "type" : "GENERIC",
+      "start" : "10:00",
+      "end" : "13:00",
+      "weekday" : "quarta",
+      "day" : "11/10/2023",
+      "period" : {
+        "start" : "11/10/2023 10:00",
+        "end" : "11/10/2023 13:00"
+      },
+      "description" : "Horário de Dúvidas de AED do professor Martim Bento",
+      "title" : "AED - Horário de Dúvidas"
+    }, {
+      "type" : "GENERIC",
+      "start" : "17:00",
+      "end" : "20:00",
+      "weekday" : "quinta",
+      "day" : "12/10/2023",
+      "period" : {
+        "start" : "12/10/2023 17:00",
+        "end" : "12/10/2023 20:00"
+      },
+      "description" : "Horário de Dúvidas de AED do Professor Luís Silveira",
+      "title" : "AED - Horário de Dúvidas"
+    }, {
+      "type" : "GENERIC",
+      "start" : "16:00",
+      "end" : "18:00",
+      "weekday" : "terça",
+      "day" : "10/10/2023",
+      "period" : {
+        "start" : "10/10/2023 16:00",
+        "end" : "10/10/2023 18:00"
+      },
+      "description" : "Reunião de Docência de AED 23/24",
+      "title" : "Reunião de Docência de AED"
+    }, {
+      "type" : "LESSON",
+      "start" : "14:30",
+      "end" : "16:00",
+      "weekday" : "segunda",
+      "day" : "09/10/2023",
+      "period" : {
+        "start" : "09/10/2023 14:30",
+        "end" : "09/10/2023 16:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589466130",
+        "acronym" : "ADInt",
+        "name" : "Aplicações Distribuídas sobre a Internet",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/ADInt/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "16:00",
+      "end" : "17:30",
+      "weekday" : "quarta",
+      "day" : "11/10/2023",
+      "period" : {
+        "start" : "11/10/2023 16:00",
+        "end" : "11/10/2023 17:30"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589466130",
+        "acronym" : "ADInt",
+        "name" : "Aplicações Distribuídas sobre a Internet",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/ADInt/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "16:00",
+      "end" : "17:30",
+      "weekday" : "segunda",
+      "day" : "09/10/2023",
+      "period" : {
+        "start" : "09/10/2023 16:00",
+        "end" : "09/10/2023 17:30"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589466130",
+        "acronym" : "ADInt",
+        "name" : "Aplicações Distribuídas sobre a Internet",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/ADInt/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "10:30",
+      "end" : "12:30",
+      "weekday" : "sexta",
+      "day" : "13/10/2023",
+      "period" : {
+        "start" : "13/10/2023 10:30",
+        "end" : "13/10/2023 12:30"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "15:00",
+      "end" : "17:00",
+      "weekday" : "quinta",
+      "day" : "12/10/2023",
+      "period" : {
+        "start" : "12/10/2023 15:00",
+        "end" : "12/10/2023 17:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "14:00",
+      "end" : "16:00",
+      "weekday" : "quarta",
+      "day" : "11/10/2023",
+      "period" : {
+        "start" : "11/10/2023 14:00",
+        "end" : "11/10/2023 16:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "10:00",
+      "end" : "12:00",
+      "weekday" : "quinta",
+      "day" : "12/10/2023",
+      "period" : {
+        "start" : "12/10/2023 10:00",
+        "end" : "12/10/2023 12:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "08:00",
+      "end" : "10:00",
+      "weekday" : "quinta",
+      "day" : "12/10/2023",
+      "period" : {
+        "start" : "12/10/2023 08:00",
+        "end" : "12/10/2023 10:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "14:00",
+      "end" : "16:00",
+      "weekday" : "terça",
+      "day" : "10/10/2023",
+      "period" : {
+        "start" : "10/10/2023 14:00",
+        "end" : "10/10/2023 16:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "08:00",
+      "end" : "10:00",
+      "weekday" : "terça",
+      "day" : "10/10/2023",
+      "period" : {
+        "start" : "10/10/2023 08:00",
+        "end" : "10/10/2023 10:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "08:00",
+      "end" : "10:00",
+      "weekday" : "sexta",
+      "day" : "13/10/2023",
+      "period" : {
+        "start" : "13/10/2023 08:00",
+        "end" : "13/10/2023 10:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "10:00",
+      "end" : "12:00",
+      "weekday" : "segunda",
+      "day" : "09/10/2023",
+      "period" : {
+        "start" : "09/10/2023 10:00",
+        "end" : "09/10/2023 12:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "11:00",
+      "end" : "13:00",
+      "weekday" : "terça",
+      "day" : "10/10/2023",
+      "period" : {
+        "start" : "10/10/2023 11:00",
+        "end" : "10/10/2023 13:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "08:00",
+      "end" : "10:00",
+      "weekday" : "quarta",
+      "day" : "11/10/2023",
+      "period" : {
+        "start" : "11/10/2023 08:00",
+        "end" : "11/10/2023 10:00"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    }, {
+      "type" : "LESSON",
+      "start" : "12:30",
+      "end" : "14:30",
+      "weekday" : "segunda",
+      "day" : "09/10/2023",
+      "period" : {
+        "start" : "09/10/2023 12:30",
+        "end" : "09/10/2023 14:30"
+      },
+      "info" : "L",
+      "course" : {
+        "id" : "283085589465584",
+        "acronym" : "AED",
+        "name" : "Algoritmos e Estrutura de Dados",
+        "academicTerm" : "1º semestre 2023/2024",
+        "url" : "https://fenix.tecnico.ulisboa.pt/disciplinas/AED/2023-2024/1-semestre"
+      }
+    } ]
+  }

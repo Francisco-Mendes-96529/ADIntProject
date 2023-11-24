@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>QRContext App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href={{ url_for("static", filename="css/calendar.css" ) }} />
+  <link rel="stylesheet" href={{ url_for("static", filename="css/messages.css" ) }} />
+  <link rel="stylesheet" href={{ url_for("static", filename="css/evaluate.css" ) }} />
+  <link rel="stylesheet" href={{ url_for("static", filename="css/star.css" ) }} />
+
+  <script>
+    // Custom <message-container> element
+    class MessageContainer extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        // Extract text from attributes
+        const type = this.getAttribute('type');
+        const messageText = this.getAttribute('message-text');
+        const time = this.getAttribute('time');
+
+        // Replace newline characters with <br> tags
+        const message = messageText.replace(/\n/g, '<br>');
+
+
+        // Create three paragraphs with variable text
+        this.innerHTML = `
+            <div class="message-container">
+              <div class="message ${type}">
+                <p class="no-margin">
+                  ${message}
+                </p>
+                <p class="msg-time no-margin">
+                  ${time}
+                </p>
+              </div>
+            </div>
+            `;
+      }
+    }
+    customElements.define('message-container', MessageContainer);
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">QRContext App</a>
+    </div>
+  </nav>
+  <div class="container mt-3">
+    {% if current_user.is_authenticated %}
+    <div class="alert alert-info" role="alert">FENIX Authenticated</div>
+    <div class="alert alert-info" role="alert" id="checked_in" style="display: none;"></div>
+    {% else %}
+    <div class="alert alert-danger" role="alert">NOT FENIX Authenticated</div>
+    {% endif %}
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <div class="alert alert-info" role="alert">
+      {% for message in messages %} {{ message }}<br />
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+    {% if current_user.is_authenticated %}
+    <span class="d-flex justify-content-between align-items-center">
+      <h2>Hi, <span id="current_user_name">{{ current_user.username }}</span>!</h2>
+      <span>
+        <a id="messageBtn" class="btn btn-secondary" href="#messages" style="display: none;">Messages</a>
+        <a id="mainScreenBtn" class="btn btn-secondary" href="#mainMenu" style="display: none;">Main Menu</a>
+        <a class="btn btn-primary" href="{{ url_for('logout') }}">Logout</a>
+      </span>
+    </span>
+    <p id="checkBtns">
+      <a class="btn btn-primary" id="checkinBtn" style="display: none;">CheckIn</a>
+      <a class="btn btn-primary" id="checkoutBtn" style="display: none;">CheckOut</a>
+    </p>
+    {% else %}
+    <p class="d-flex justify-content-end">
+      <a class="btn btn-primary" href="{{ url_for('oauth2_authorize', provider='fenix') }}">Login</a>
+    </p>
+    {% endif %}
+
+  </div>
+
+  <div id="mainScreen">
+    <div class="container mt-3" style="width: 500px" id="reader"></div>
+
+    <div class="container mt-3 alert alert-success" role="alert" id="eval-success" style="display:none;"> Thank you for
+      your Evaluation!</div>
+    <div class="container mt-3 alert alert-warning" role="alert" id="eval-fail" style="display:none;"> Error: Evaluation
+      not Sent. </div>
+
+    <div class="container my-3 container-eval" id="container-eval" style="display: none;">
+      <h1>Give Restaurant a Rating</h1>
+      <form id="ratingForm" class="needs-validated" novalidate>
+        <input type="hidden" name="restaurantId" />
+
+        <label for="evaluation">Evaluation:</label>
+        <textarea id="evaluation" name="evaluation" rows="1" cols="15"></textarea>
+
+        <label for="rating">Rating:</label>
+        <div class="container d-flex justify-content-center mt-200">
+
+
+          <div class="container d-flex justify-content-center">
+
+            <div class="stars form-check">
+
+              <input class="star star-5 form-check-input" id="star5" type="radio" name="rating" value="5" required />
+              <label class="star star-5" for="star5"></label>
+
+              <input class="star star-4 form-check-input" id="star4" type="radio" name="rating" value="4" required />
+              <label class="star star-4" for="star4"></label>
+
+              <input class="star star-3 form-check-input" id="star3" type="radio" name="rating" value="3" required />
+              <label class="star star-3" for="star3"></label>
+
+              <input class="star star-2 form-check-input" id="star2" type="radio" name="rating" value="2" required />
+              <label class="star star-2" for="star2"></label>
+
+              <input class="star star-1 form-check-input" id="star1" type="radio" name="rating" value="1" required />
+              <label class="star star-1" for="star1"></label>
+
+              <div class="invalid-feedback">
+                Please select a rating!
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+
+    <div class="container" id="menu" style="display: none;">
+      <h1 id="nameHeader"></h1>
+      <table id="dataTable" class="table">
+        <thead>
+          <tr>
+            <th>Food</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="coursesContainer" class="container mt-4" style="display: none;">
+      <div class="container bg-info bg-opacity-10 text-center p-3"
+        style="width: fit-content; border-radius: 20px; border-style: solid; border-color: silver; border-width: thin;">
+        <h3>You are enrolled in the following ongoing/upcoming courses:</h3>
+        <div id="courses-names" style="font-size: x-large;"></div>
+        <button id="courses-checkBtn" class="btn btn-lg btn-primary mt-2">Check-in</button>
+      </div>
+    </div>
+
+    <div id="spContainer" class="container my-4" style="display: none;">
+      <h1>Study Room: <span id="sp-room"></span></h1>
+      <div id="sp-formContainer" class="container bg-info bg-opacity-10 text-center p-3"
+        style="width: fit-content; border-radius: 20px; border-style: solid; border-color: silver; border-width: thin;">
+        <h3>Create a study period?</h3>
+
+        <form id="sp-form" class="needs-validation text-start" novalidate>
+
+          <div class="mb-3">
+            <label for="sp-courseSelect" class="form-label">Course:</label>
+            <select id="sp-courseSelect" class="form-select" required aria-label="select course">
+              <option value="">Select a course</option>
+              <option value="1">..</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a course
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center mt-2">
+            <button id="sp-checkBtn" class="btn btn-lg btn-primary" type="submit">Check-in</button>
+          </div>
+        </form>
+      </div>
+      <div id="sp-success" class="container bg-success bg-opacity-10 text-center p-3"
+        style="width: fit-content; border-radius: 20px; border-style: solid; border-color: silver; border-width: thin;">
+        <h3 class="m-0">You are in a study period!</h3>
+      </div>
+      <div id="sp-warning" class="container bg-warning bg-opacity-10 text-center p-3"
+        style="width: fit-content; border-radius: 20px; border-style: solid; border-color: silver; border-width: thin;">
+        <h3 class="m-0">You are already checked in another space!</h3>
+      </div>
+    </div>
+
+    <div id="calendar" class="calendar" style="display: none;">
+      <div class="body">
+
+        <div class="schedule">
+          <h1>Schedule of Space: <span id="space-name"></span></h1>
+
+          <div class="outer">
+            <table>
+              <thead>
+                <tr>
+                  <th class="headcol th"></th>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th class="endcol"></th>
+                </tr>
+              </thead>
+            </table>
+
+            <div class="wrap">
+              <table>
+
+                <tbody id="schedule-body"></tbody>
+
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="messagesContainer" class="container" style="display: none;">
+    <h3>Room: <span id="msg-roomId"></span></h3>
+    <p></p>
+    <h4>Chat</h4>
+
+    <div class="container chat">
+
+      <div>
+        <select id="msg-userSelect" class="form-select">
+          <option selected>Select a user</option>
+        </select>
+      </div>
+
+      <div id="msg-chat" class="messages"></div>
+
+      <div id="msg-input" class="input-group msg-input">
+        <textarea id="msg-input-text" class="form-control" rows="1" oninput="textareaAutoResize(this)"></textarea>
+        <span class="msg-input-btn">
+          <button id="msg-input-btn" class="btn btn-success" style="border-radius: 20px;">Send</button>
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/qrcontextutils.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/buttonutils.js') }}"></script>
+  <script src="/files/html5-qrcode.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      const currentUserAuth = `{{ current_user.is_authenticated | tojson | safe }}` === 'true';
+      if (currentUserAuth) {
+        console.log("Authenticated!!")
+        userId = `{{current_user.username |safe}}`
+        console.log(userId)
+        handleLogIn()
+      }
+
+      var html5QrcodeScanner = new Html5QrcodeScanner("reader", {
+        fps: 10,
+        qrbox: 250,
+      });
+
+      function onScanSuccess(decodedText, decodedResult) {
+        if (lastQRCode !== decodedText) {
+          lastQRCode = decodedText;
+
+          // Handle on success condition with the decoded text or result.
+          console.log(`Scan result: ${decodedText}`, decodedResult);
+          // Send the decodedText to an endpoint using jQuery
+          handleQRCodeData(decodedText);
+        }
+      }
+
+      html5QrcodeScanner.render(onScanSuccess);
+
+      $("#checkoutBtn").click(function () {
+        handleCheckOutBtn(lastQRCode,);
+      });
+
+      $("#checkinBtn").click(function () {
+        handleCheckInBtn(lastQRCode, userId)
+      });
+
+      $("#courses-checkBtn").click(function () {
+        handleCheckInBtn(lastQRCode, userId)
+      });
+
+      // Attach the handleHashChange function to the hashchange event
+      addEventListener('hashchange', handleHashChange);
+      handleHashChange();
+
+      $("#msg-input-btn").click(sendMessage);
+
+      // JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        'use strict'
+
+        const spForm = document.getElementById("sp-form");
+        spForm.addEventListener('submit', event => {
+          if (!spForm.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          } else {
+            // Prevent the default form submission
+            event.preventDefault();
+            handleCheckInBtn(lastQRCode, userId)
+          }
+
+          spForm.classList.add('was-validated');
+        }, false)
+
+        const ratingForm = document.getElementById("ratingForm");
+        ratingForm.addEventListener('submit', event => {
+          if (!ratingForm.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          } else {
+            // Prevent the default form submission
+            event.preventDefault();
+            handleRatingForm();
+          }
+
+          ratingForm.classList.add('was-validated');
+        }, false)
+
+
+      })()
+    });
+
+
+  </script>
+
+</body>
+
+</html>

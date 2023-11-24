@@ -1,0 +1,16 @@
+{% extends 'layout_submit.html' %}
+
+{% block title %}Failure!{% endblock %}
+
+{% block content %}
+
+<h1>Your evaluation failed!</h1>
+
+<h2> Make sure to properly fill the required User Id and Rating fields </h2>
+
+<form method="post" action="/">
+    <button type="submit" class="button submit-button">Go back</button>
+</form>  
+
+
+{% endblock %}

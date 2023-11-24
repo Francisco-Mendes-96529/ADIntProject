@@ -1,0 +1,15 @@
+{% extends 'layout_submit.html' %}
+
+{% block title %}Success!{% endblock %}
+
+{% block content %}
+
+<h1>Success!</h1>
+<h2>{{data["message"]}}</h2>
+
+<form method="post" action={{data["action"]}}>
+    <button type="submit" class="button submit-button">Go back</button>
+</form>  
+
+
+{% endblock %}
